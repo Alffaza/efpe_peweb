@@ -136,7 +136,7 @@
 
                     include 'src/koneksi.php';
 
-                    $sql = $pdo->prepare("SELECT * FROM Peserta JOIN Akun_Peserta WHERE Peserta.sudah_oke=false");
+                    $sql = $pdo->prepare("SELECT * FROM Peserta INNER JOIN Akun_Peserta ON Peserta.id_akun = Akun_Peserta.id_akun WHERE Peserta.sudah_oke=false");
                     $sql->execute();
                     while($data = $sql->fetch(PDO::FETCH_ASSOC)){
                         echo '<tr>';

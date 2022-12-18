@@ -6,7 +6,9 @@
     $id = $_SESSION['id_akun'];
     $sql = $pdo->prepare("SELECT * FROM Peserta WHERE id_akun=:id");
     $sql->bindParam(':id', $id);
-    if($sql)
+    $sql->execute();
+    $res = $sql->fetch();
+    if($res)
         header('location: document-modify.php');
 ?>
 

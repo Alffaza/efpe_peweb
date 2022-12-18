@@ -59,7 +59,7 @@ session_start()
                                     
                                 </ul>
                                 <div class="menu_side_area">
-                                    <a href="login.html" class="btn-main btn-wallet"><i class="icon_wallet_alt"></i><span>Sign out</span></a>
+                                    <a href="src/process/signout.php" class="btn-main btn-wallet"><i class="icon_wallet_alt"></i><span>Sign out</span></a>
                                     <span id="menu-btn"></span>
                                 </div>
                                 
@@ -96,13 +96,15 @@ session_start()
                 <?php
                 include 'src/koneksi.php';
 
-                $msg = 'berkas anda sudah diverifikasi, silahkan cetak kartu ujian';
+                $msg = 'berkas anda belum diverifikasi';
 
                 $id = $_SESSION['id_akun'];
                 $sql = $pdo->prepare("SELECT * FROM Peserta WHERE id_akun=:id AND sudah_oke=true");
                 $sql->bindParam(':id', $id);
-                if(!$sql)
-                    $msg = 'berkas anda belum diverifikasi';
+                $sql->execute();
+                $result=$sql->fetch();
+                if($result)
+                    $msg = 'berkas anda sudah diverifikasi, silahkan cetak kartu ujian';
 
                 echo '<h1 style="text-align:center">'.$msg.'</h1>';
                 ?>
@@ -113,7 +115,7 @@ session_start()
                                 <img src="images/misc/coll-single.png" alt="">
                                 <h3>Upload / Edit Document</h3>
                             </a>
-                            <a href="home.html" class="opt-create">
+                            <a href="src/process/generate_kartu.php" class="opt-create">
                                 <img src="images/misc/coll-multiple.png" alt="">
                                 <h3>Print Document</h3>
                             </a>
