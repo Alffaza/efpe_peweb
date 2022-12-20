@@ -1,11 +1,11 @@
 <?php 
  
- include 'koneksi.php';
+ include '../koneksi.php';
  
 session_start();
  
 if (isset($_SESSION['username'])) {
-    header("Location: berhasil_login.php");
+    header("Location: ../../admin.php");
 }
  
 $username = $_POST['username'];
@@ -17,17 +17,10 @@ $sql->execute();
 $result = $sql->fetch(PDO::FETCH_ASSOC);
 if ($result) {
     $_SESSION['username'] = $result['username'];
-    $_SESSION['id_akun'] = $result['id_akun'];
+    $_SESSION['id_admin'] = $result['id_akun'];
+    header("Location: ../../admin.php");
 } else {
-    echo "<script>alert('Email atau password Anda salah. Silahkan coba lagi!')</script>";
+    echo "<script>alert('username atau password Anda salah. Silahkan coba lagi!')</script>";
 }
-
-
-// if ($result->num_rows > 0) {
-//     $row = mysqli_fetch_assoc($result);
-//     header("Location: berhasil_login.php");
-// } else {
-//     echo "<script>alert('Email atau password Anda salah. Silahkan coba lagi!')</script>";
-// }
  
 ?>

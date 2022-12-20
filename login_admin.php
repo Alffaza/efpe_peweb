@@ -1,6 +1,4 @@
-<?php
-session_start()
-?>
+<!DOCTYPE html>
 <html lang="zxx">
 
 <head>
@@ -23,7 +21,7 @@ session_start()
 
 <body>
     <div id="wrapper">
-
+		
         <!-- header begin -->
         <header class="transparent">
             <div class="container">
@@ -73,68 +71,68 @@ session_start()
         <!-- content begin -->
         <div class="no-bottom no-top" id="content">
             <div id="top"></div>
-            
-            <!-- section begin -->
-            <section id="subheader" class="text-light" data-bgimage="url(images/background/26.jpg) top">
-                    <div class="center-y relative text-center">
-                        <div class="container">
-                            <div class="row">
-                                
-                                <div class="col-md-12 text-center">
-									<h1>Document</h1>
-                                </div>
-                                <div class="clearfix"></div>
+			
+			<section class="full-height relative no-top no-bottom vertical-center" data-bgimage="url(images/background/subheader.jpg) top" data-stellar-background-ratio=".5">
+                <div class="overlay-gradient t50">
+					<div class="center-y relative">
+						<div class="container">
+							<div class="row align-items-center">
+								<div class="col-lg-5 text-light wow fadeInRight" data-wow-delay=".5s">
+                                <div class="spacer-10"></div>
+                                <h1>Portal Pendaftaran dan Ujian.</h1>
+                                <p class="lead">Portal Pendaftaran dan Ujian Pegawai Baru Kementerian Kelautan dan Perikanan Provinsi Jawa Timur.</p>
                             </div>
-                        </div>
-                    </div>
-            </section>
-            <!-- section close -->
+								
+								<div class="col-lg-4 offset-lg-2 wow fadeIn" data-wow-delay=".5s">
+									<div class="box-rounded padding40" data-bgcolor="#ffffff">
+										<h3 class="mb10">Sign In</h3>
+										<form name="contactForm" id='contact_form' class="form-border" method="post" action='src/process/login_admin.php'>
+
+                                            <div class="field-set">
+                                                <input type='text' name='username' id='username' class="form-control" placeholder="username">
+                                            </div>
+											
+											 <div class="field-set">
+                                                <input type='password' name='password' id='password' class="form-control" placeholder="password">
+                                            </div>
+											
+											<div class="field-set">
+												<input type='submit' id='send_message' class="btn btn-main btn-fullwidth color-2" value='Submit'>
+											</div>
+											
+											<div class="clearfix"></div>
+											
+											<div class="spacer-single"></div>
+
+                                        <!-- admin login -->
+                                        <!-- <ul class="list s3">
+                                            <li>Login As:</li>
+                                            <li><a href="login-admin.html">Admin</a></li>
+                                        </ul> -->
+                                        <!-- admin login -->
+                                </form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>		
             
+            </div>
+            <!-- content close -->
 
-            <!-- section begin -->
-            <section aria-label="section">
-                <?php
-                include 'src/koneksi.php';
-
-                $msg = 'berkas anda sudah diverifikasi, silahkan cetak kartu ujian';
-
-                $id = $_SESSION['id_akun'];
-                $sql = $pdo->prepare("SELECT * FROM Peserta WHERE id_akun=:id AND sudah_oke=true");
-                $sql->bindParam(':id', $id);
-                if(!$sql)
-                    $msg = 'berkas anda belum diverifikasi';
-
-                echo '<h1 style="text-align:center">'.$msg.'</h1>';
-                ?>
-                <div class="container">
-                    <div class="row wow fadeIn">
-                        <div class="col-md-6 offset-md-3">
-                            <a href="document-upload.php" class="opt-create">
-                                <img src="images/misc/coll-single.png" alt="">
-                                <h3>Upload / Edit Document</h3>
-                            </a>
-                            <a href="home.html" class="opt-create">
-                                <img src="images/misc/coll-multiple.png" alt="">
-                                <h3>Print Document</h3>
-                            </a>
-                        </div>                             
-                    </div>
-                </div>
-            </section>
-
-        </div>
-        <!-- content close -->
-
-        <a href="#" id="back-to-top"></a>
-           
+            
+        
     </div>
     
     <!-- Javascript Files
     ================================================== -->
     <script src="js/plugins.js"></script>
     <script src="js/designesia.js"></script>
+        
 
-
+		
 </body>
 
 </html>

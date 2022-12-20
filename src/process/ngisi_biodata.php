@@ -20,10 +20,10 @@ $pas_foto_tmp = $_FILES['pas_foto']['tmp_name'];
 $foto_berkas = $_FILES['foto_berkas']['name'];
 $foto_berkas_tmp = $_FILES['foto_berkas']['tmp_name'];
 
-$fotobaru = date('dmYHis').$pas_foto;
-$path_pas = "../../images/pas/".$fotobaru;
-$fotobaru = date('dmYHis').$foto_berkas;
-$path_berkas = "../../images/berkas/".$fotobaru;
+$fotobaru_pas = date('dmYHis').$pas_foto;
+$path_pas = "../../images/pas/".$fotobaru_pas;
+$fotobaru_berkas = date('dmYHis').$foto_berkas;
+$path_berkas = "../../images/berkas/".$fotobaru_berkas;
 
 
 if(move_uploaded_file($pas_foto_tmp, $path_pas) && move_uploaded_file($foto_berkas_tmp, $path_berkas))
@@ -35,8 +35,8 @@ if(move_uploaded_file($pas_foto_tmp, $path_pas) && move_uploaded_file($foto_berk
     $sql->bindParam(':tanggal_lahir', $tanggal_lahir);
     $sql->bindParam(':kualifikasi_pendidikan', $kualifikasi_pendidikan);
     $sql->bindParam(':formasi_jabatan', $formasi_jabatan);
-    $sql->bindParam(':pas_foto', $pas_foto);
-    $sql->bindParam(':foto_berkas', $foto_berkas);
+    $sql->bindParam(':pas_foto', $fotobaru_pas);
+    $sql->bindParam(':foto_berkas', $fotobaru_berkas);
     $sql->execute();
     if($sql){
         header("location: ../../profile.php");
