@@ -1,6 +1,6 @@
 <?php
 // Load file koneksi.php
-include "koneksi.php";
+include "../koneksi.php";
 // Ambil Data yang Dikirim dari Form
 $nik = $_POST['nik'];
 $nama = $_POST['nama'];
@@ -17,7 +17,7 @@ $no_telp = $_POST['no_telp'];
   $sql->bindParam(':no_telp', $no_telp);
   $sql->execute(); // Eksekusi query insert
   if($sql){ // Cek jika proses simpan ke database sukses atau tidak
-    header("location: index.php"); // Redirect ke halaman index.php
+    header("location: ../../login.php"); // Redirect ke halaman index.php
   }else{
     // Jika Gagal, Lakukan :
     echo "Maaf, Terjadi kesalahan saat mencoba untuk menyimpan data ke database.";

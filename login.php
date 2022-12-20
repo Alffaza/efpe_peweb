@@ -21,7 +21,7 @@
 
 <body>
     <div id="wrapper">
-
+		
         <!-- header begin -->
         <header class="transparent">
             <div class="container">
@@ -50,7 +50,8 @@
                                     </li>
                                     <li>
                                         <a href="explore.html">Profile</a>                             
-                                    </li><li>
+                                    </li>
+                                    <li>
                                         <a href="explore.html">Document</a>                             
                                     </li>
                                     
@@ -70,71 +71,69 @@
         <!-- content begin -->
         <div class="no-bottom no-top" id="content">
             <div id="top"></div>
-            
-            <!-- section begin -->
-            <section id="subheader" class="text-light" data-bgimage="url(images/background/26.jpg) top">
-                    <div class="center-y relative text-center">
-                        <div class="container">
-                            <div class="row">
-                                
-                                <div class="col-md-12 text-center">
-									<h1>Create Account</h1>
-                                </div>
-                                <div class="clearfix"></div>
+			
+			<section class="full-height relative no-top no-bottom vertical-center" data-bgimage="url(images/background/subheader.jpg) top" data-stellar-background-ratio=".5">
+                <div class="overlay-gradient t50">
+					<div class="center-y relative">
+						<div class="container">
+							<div class="row align-items-center">
+								<div class="col-lg-5 text-light wow fadeInRight" data-wow-delay=".5s">
+                                <div class="spacer-10"></div>
+                                <h1>Portal Pendaftaran dan Ujian.</h1>
+                                <p class="lead">Portal Pendaftaran dan Ujian Pegawai Baru Kementerian Kelautan dan Perikanan Provinsi Jawa Timur.</p>
                             </div>
-                        </div>
-                    </div>
-            </section>
-            <!-- section close -->
+								
+								<div class="col-lg-4 offset-lg-2 wow fadeIn" data-wow-delay=".5s">
+									<div class="box-rounded padding40" data-bgcolor="#ffffff">
+										<h3 class="mb10">Sign In</h3>
+										<p>Login using an existing account or create a new account <a href="create.php">here<span></span></a>.</p>
+										<form name="contactForm" id='contact_form' class="form-border" method="post" action='src/process/login.php'>
+
+                                            <div class="field-set">
+                                                <input type='text' name='nik' id='nik' class="form-control" placeholder="nik">
+                                            </div>
+											
+											 <div class="field-set">
+                                                <input type='password' name='password' id='password' class="form-control" placeholder="password">
+                                            </div>
+											
+											<div class="field-set">
+												<input type='submit' id='send_message' class="btn btn-main btn-fullwidth color-2" value='Submit'>
+											</div>
+											
+											<div class="clearfix"></div>
+											
+											<div class="spacer-single"></div>
+
+                                        <!-- admin login -->
+                                        <!-- <ul class="list s3">
+                                            <li>Login As:</li>
+                                            <li><a href="login-admin.html">Admin</a></li>
+                                        </ul> -->
+                                        <!-- admin login -->
+                                </form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>		
             
+            </div>
+            <!-- content close -->
 
-            <!-- section begin -->
-            <section aria-label="section">
-                <div class="container">
-                    <div class="row wow fadeIn">
-                        <div class="col-lg-7 center-div">
-                            <form id="form-create-item" class="form-border" method="post" action="email.php">
-                                <div class="field-set">
-                                    <h5>Upload Photo</h5>
-
-                                    <div class="d-create-file">
-                                        <p id="file_name">PNG, JPG, GIF, WEBP or MP4. Max 200mb.</p>
-                                        <input type="button" id="get_file" class="btn-main" value="Browse">
-                                        <input type="file" id="upload_file">
-                                    </div>
-
-                                    <div class="spacer-40"></div>
-
-                                    <h5>Username</h5>
-                                    <input type="text" name="item_title" id="item_title" class="form-control" placeholder="Banana123" />
-
-                                    <h5>Email</h5>
-                                    <input type="text" name="item_title" id="item_title" class="form-control" placeholder="fazaganteng@gmail.com" />
-
-                                    <h5>Password</h5>
-                                    <input type="text" name="item_title" id="item_title" class="form-control" placeholder="312ananab" />
-
-                                    <input type="button" id="submit" class="btn-main" value="Create Account" onclick="location.href='login.html';">
-                                    <div class="spacer-single"></div>
-                                </div>
-                            </form>
-                        </div>  
-                </div>
-            </section>
-
-        </div>
-        <!-- content close -->
-
-        <a href="#" id="back-to-top"></a>
-    
+            
+        
     </div>
     
     <!-- Javascript Files
     ================================================== -->
     <script src="js/plugins.js"></script>
     <script src="js/designesia.js"></script>
+        
 
-
+		
 </body>
 
 </html>

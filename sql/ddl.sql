@@ -13,7 +13,7 @@ CREATE TABLE Akun_Peserta(
 CREATE TABLE Peserta(
   nomor_peserta int(16) NOT NULL AUTO_INCREMENT,
   id_akun int(10) NOT NULL,
-  jenis_kelamin boolean NOT NULL,
+  jenis_kelamin varchar(10) NOT NULL,
   tempat_lahir varchar(64),
   tanggal_lahir date,
   kualifikasi_pendidikan varchar(64) NOT NULL,
@@ -22,7 +22,8 @@ CREATE TABLE Peserta(
   pas_foto varchar(200) NOT NULL,
   foto_berkas varchar(200) NOT NULL,
   sudah_oke boolean,
-  FOREIGN KEY (id_akun) REFERENCES Akun_Peserta(id_akun)
+  FOREIGN KEY (id_akun) REFERENCES Akun_Peserta(id_akun),
+  PRIMARY KEY(nomor_peserta)
 );
 
 CREATE TABLE Akun_Panitia(
