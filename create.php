@@ -49,9 +49,9 @@
                                         <a href="home.html">Home</a>
                                     </li>
                                     <li>
-                                        <a href="explore.html">Profile</a>                             
+                                        <a href="home.html">Profile</a>                             
                                     </li><li>
-                                        <a href="explore.html">Document</a>                             
+                                        <a href="home.html">Document</a>                             
                                     </li>
                                     
                                 </ul>

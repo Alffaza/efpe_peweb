@@ -10,7 +10,7 @@ if (isset($_SESSION['username'])) {
  
 $username = $_POST['username'];
 $password = $_POST['password'];
-$sql = $pdo->prepare("SELECT * FROM Akun_Peserta WHERE username=:username AND password=:password");
+$sql = $pdo->prepare("SELECT * FROM Akun_Panitia WHERE username=:username AND password=:password");
 $sql->bindParam(':username', $username);
 $sql->bindParam(':password', $password);
 $sql->execute();

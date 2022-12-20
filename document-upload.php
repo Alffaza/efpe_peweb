@@ -48,9 +48,9 @@
                                         <a href="home.html">Home</a>
                                     </li>
                                     <li>
-                                        <a href="explore.html">Profile</a>                             
+                                        <a href="home.html">Profile</a>                             
                                     </li><li>
-                                        <a href="explore.html">Document</a>                             
+                                        <a href="home.html">Document</a>                             
                                     </li>
                                     
                                 </ul>
@@ -94,6 +94,14 @@
                         <div class="col-lg-7 center-div">
                             <form id="form-create-item" class="form-border" method="post" action="email.php">
                                 <div class="field-set">
+                                    <h5>Upload Pas Foto</h5>
+                                    
+                                    <div class="d-create-file">
+                                        <p id="file_name">WORD, PDF, PNG, JPG or SVG. Max 500mb.</p>
+                                        <input type="button" id="get_file" class="btn-main" value="Browse">
+                                        <input type="file" id="upload_file">
+                                    </div>
+                                   
                                     <h5>Upload Document</h5>
                                     
                                     <div class="d-create-file">
@@ -117,10 +125,7 @@
                                             <li><span>Others</span></li>
                                         </ul>
                                     </div>
-                                    
-                                    <h5>Phone</h5>
-                                    <input type="text" name="item_title" id="item_title" class="form-control" placeholder="081223495689" />
-
+                                                                     
                                     <h5>Religion</h5>
                                     <!-- <p class="p-info">agama mu.</p> -->
 
@@ -139,11 +144,11 @@
                                     <div class="spacer-10"></div>
 
                                     
-
-                                    <div class="spacer-9"></div>
+                                    <h5>Phone</h5>
+                                    <input type="text" name="item_title" id="item_title" class="form-control" placeholder="081223495689" />
 
                                 
-                                    <h5>Address</h5>
+                                    <h5>Tempat Lahir</h5>
                                     <textarea data-autoresize name="item_desc" id="item_desc" class="form-control" placeholder="Jalan Raya ITS, Sukolilo Kota Surabaya 60111 Jawa Timur"></textarea>
 
                                     <div class="col-md-6">
@@ -152,6 +157,23 @@
                                     </div>
 
                                     <div class="spacer-20"></div>
+
+                                    <h5>Religion</h5>
+                                    <!-- <p class="p-info">agama mu.</p> -->
+
+                                    <div id="item_collection" class="dropdown fullwidth mb20">
+                                        <a href="#" class="btn-selector">Select Religion</a>
+                                        <ul>
+                                            <li><span>SD</span></li>
+                                            <li><span>SMP</span></li>
+                                            <li><span>SMA</span></li>
+                                            <li><span>D3</span></li>
+                                            <li><span>S1</span></li>
+                                            <li><span>S2</span></li>
+                                            <li><span>S3</span></li>
+                                            <li><span>Lainnya</span></li>
+                                        </ul>
+                                    </div>
 
                                     <input type="button" id="submit" class="btn-main" value="Upload">
                                     <div class="spacer-single"></div>
