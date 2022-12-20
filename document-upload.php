@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="zxx">
 
 <head>
@@ -96,17 +95,28 @@
                             <form id="form-create-item" class="form-border" method="post" action="email.php">
                                 <div class="field-set">
                                     <h5>Upload Document</h5>
-
+                                    
                                     <div class="d-create-file">
                                         <p id="file_name">WORD, PDF, PNG, JPG or SVG. Max 500mb.</p>
                                         <input type="button" id="get_file" class="btn-main" value="Browse">
                                         <input type="file" id="upload_file">
                                     </div>
-
+                                    
                                     <div class="spacer-40"></div>
-
-                                    <h5>Name</h5>
-                                    <input type="text" name="item_title" id="item_title" class="form-control" placeholder="Muhammad Reza Marenelo" />
+                                    
+                                    <!-- <h5>Name</h5>
+                                    <input type="text" name="item_title" id="item_title" class="form-control" placeholder="Muhammad Reza Marenelo" /> -->
+                                    <h5>Jenis Kelamin</h5>
+                                    <!-- <p class="p-info">agama mu.</p> -->
+                        
+                                    <div id="item_collection" class="dropdown fullwidth mb20">
+                                        <a href="#" class="btn-selector">Gender</a>
+                                        <ul>
+                                            <li><span>Male</span></li>
+                                            <li><span>Female</span></li>
+                                            <li><span>Others</span></li>
+                                        </ul>
+                                    </div>
                                     
                                     <h5>Phone</h5>
                                     <input type="text" name="item_title" id="item_title" class="form-control" placeholder="081223495689" />
@@ -129,17 +139,6 @@
                                     <div class="spacer-10"></div>
 
                                     
-                                    <h5>Religion</h5>
-                                    <!-- <p class="p-info">agama mu.</p> -->
-
-                                    <div id="item_collection" class="dropdown fullwidth mb20">
-                                        <a href="#" class="btn-selector">Gender</a>
-                                        <ul>
-                                            <li><span>Male</span></li>
-                                            <li><span>Female</span></li>
-                                            <li><span>Others</span></li>
-                                        </ul>
-                                    </div>
 
                                     <div class="spacer-9"></div>
 

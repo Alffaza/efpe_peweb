@@ -94,7 +94,7 @@
                 <div class="container">
                     <div class="row wow fadeIn">
                         <div class="col-md-6 offset-md-3">
-                            <a href="create-single.html" class="opt-create">
+                            <a href="document-upload.php" class="opt-create">
                                 <img src="images/misc/coll-single.png" alt="">
                                 <h3>Upload Document</h3>
                             </a>

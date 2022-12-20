@@ -1,6 +1,6 @@
 <?php 
  
- include 'koneksi.php';
+ include '../koneksi.php';
  
 session_start();
  
@@ -22,9 +22,9 @@ $foto_berkas = $_FILES['foto_berkas']['name'];
 $foto_berkas_tmp = $_FILES['pas_foto']['tmp_name'];
 
 $fotobaru = date('dmYHis').$pas_foto;
-$path_pas = "images/pas/".$fotobaru;
+$path_pas = "../../images/pas/".$fotobaru;
 $fotobaru = date('dmYHis').$foto_berkas;
-$path_berkas = "images/berkas/".$fotobaru;
+$path_berkas = "../../images/berkas/".$fotobaru;
 
 if(move_uploaded_file($pas_foto_tmp, $path_pas) && move_uploaded_file($berkas_tmp, $path_berkas))
 { // Cek apakah gambar berhasil diupload atau tidak
@@ -40,7 +40,7 @@ if(move_uploaded_file($pas_foto_tmp, $path_pas) && move_uploaded_file($berkas_tm
     $sql->bindParam(':foto_berkas', $foto_berkas);
     $sql->execute();
     if($sql){
-        header("location: peserta.php");
+        header("location: ../../profile.php");
     }else{
         // Jika Gagal, Lakukan :
         echo "Maaf, Terjadi kesalahan saat mencoba untuk menyimpan data ke database.";
