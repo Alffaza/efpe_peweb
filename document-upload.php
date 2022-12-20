@@ -92,43 +92,52 @@
                 <div class="container">
                     <div class="row wow fadeIn">
                         <div class="col-lg-7 center-div">
-                            <form id="form-create-item" class="form-border" method="post" action="email.php">
+                            <form id="form-create-item" class="form-border" method="post" action="ngisi_biodata.php">
                                 <div class="field-set">
-                                    <h5>Upload Pas Foto</h5>
-                                    
-                                    <div class="d-create-file">
-                                        <p id="file_name">WORD, PDF, PNG, JPG or SVG. Max 500mb.</p>
-                                        <input type="button" id="get_file" class="btn-main" value="Browse">
-                                        <input type="file" id="upload_file">
-                                    </div>
-                                   
-                                    <h5>Upload Document</h5>
-                                    
-                                    <div class="d-create-file">
-                                        <p id="file_name">WORD, PDF, PNG, JPG or SVG. Max 500mb.</p>
-                                        <input type="button" id="get_file" class="btn-main" value="Browse">
-                                        <input type="file" id="upload_file">
-                                    </div>
-                                    
-                                    <div class="spacer-40"></div>
-                                    
-                                    <!-- <h5>Name</h5>
-                                    <input type="text" name="item_title" id="item_title" class="form-control" placeholder="Muhammad Reza Marenelo" /> -->
+                          
                                     <h5>Jenis Kelamin</h5>
-                                    <!-- <p class="p-info">agama mu.</p> -->
-                        
-                                    <div id="item_collection" class="dropdown fullwidth mb20">
+
+                                    <div id="jenis_kelamin" class="dropdown fullwidth mb20">
                                         <a href="#" class="btn-selector">Gender</a>
                                         <ul>
-                                            <li><span>Male</span></li>
-                                            <li><span>Female</span></li>
-                                            <li><span>Others</span></li>
+                                            <li value="male"><span>Male</span></li>
+                                            <li value="female"><span>Female</span></li>
                                         </ul>
                                     </div>
-                                                                     
-                                    <h5>Religion</h5>
+
+                                    <h5>Tempat Lahir</h5>
+                                    <textarea data-autoresize name="tempat_lahir" id="tempat_lahir" class="form-control" placeholder="Jalan Raya ITS, Sukolilo Kota Surabaya 60111 Jawa Timur"></textarea>
+
+                                    <div class="col-md-6">
+                                        <h5>Tanggal Lahir</h5>
+                                        <input type="date" name="tanggal_lahir" id="tanggal_lahir" class="form-control" min="1997-01-01" />
+                                    </div>
+
+                                    <h5>Kualifikasi Pendidikan</h5>
                                     <!-- <p class="p-info">agama mu.</p> -->
 
+                                    <div id="kualifikasi_pendidikan" class="dropdown fullwidth mb20">
+                                        <a href="#" class="btn-selector">Select Religion</a>
+                                        <ul>
+                                            <li value="SD"><span>SD</span></li>
+                                            <li value="SMP"><span>SMP</span></li>
+                                            <li value="SMA"><span>SMA</span></li>
+                                            <li value="D3"><span>D3</span></li>
+                                            <li value="S1"><span>S1</span></li>
+                                            <li value="S2"><span>S2</span></li>
+                                            <li value="S3"><span>S3</span></li>
+                                            <li value="lainnya"><span>Lainnya</span></li>
+                                        </ul>
+                                    </div>
+
+                                    <h5>Formasi Jabatan</h5>
+                                    <textarea data-autoresize name="formasi_jabatan" id="formasi_jabatan" class="form-control" placeholder="Jalan Raya ITS, Sukolilo Kota Surabaya 60111 Jawa Timur"></textarea>
+
+                                    <h5>Lokasi Tes</h5>
+                                    <textarea data-autoresize name="lokasi_tes" id="lokasi_tes" class="form-control" placeholder="Jalan Raya ITS, Sukolilo Kota Surabaya 60111 Jawa Timur"></textarea>
+
+                                    <!-- <h5>Religion</h5>
+                                    
                                     <div id="item_collection" class="dropdown fullwidth mb20">
                                         <a href="#" class="btn-selector">Select Religion</a>
                                         <ul>
@@ -139,42 +148,33 @@
                                             <li><span>Konghucu</span></li>
                                             <li><span>Others</span></li>
                                         </ul>
-                                    </div>
+                                    </div> -->
 
-                                    <div class="spacer-10"></div>
-
+                                    <h5>Upload Pas Foto</h5>
                                     
-                                    <h5>Phone</h5>
-                                    <input type="text" name="item_title" id="item_title" class="form-control" placeholder="081223495689" />
-
-                                
-                                    <h5>Tempat Lahir</h5>
-                                    <textarea data-autoresize name="item_desc" id="item_desc" class="form-control" placeholder="Jalan Raya ITS, Sukolilo Kota Surabaya 60111 Jawa Timur"></textarea>
-
-                                    <div class="col-md-6">
-                                        <h5>Birth Date</h5>
-                                        <input type="date" name="bid_starting_date" id="bid_starting_date" class="form-control" min="1997-01-01" />
+                                    <div class="d-create-file">
+                                        <p id="file_name">WORD, PDF, PNG, JPG or SVG. Max 500mb.</p>
+                                        <input type="button" id="pas_foto" class="btn-main" value="Browse">
+                                        <input type="file" id="pas_foto">
                                     </div>
-
-                                    <div class="spacer-20"></div>
-
-                                    <h5>Religion</h5>
+                                   
+                                    <h5>Upload Document</h5>
+                                    
+                                    <div class="d-create-file">
+                                        <p id="file_name">WORD, PDF, PNG, JPG or SVG. Max 500mb.</p>
+                                        <input type="button" id="foto_berkas" class="btn-main" value="Browse">
+                                        <input type="file" id="foto_berkas">
+                                    </div>
+                                    
+                                    <div class="spacer-40"></div>
+                                    
+                                    <!-- <h5>Name</h5>
+                                    <input type="text" name="item_title" id="item_title" class="form-control" placeholder="Muhammad Reza Marenelo" /> -->
+                                    
                                     <!-- <p class="p-info">agama mu.</p> -->
-
-                                    <div id="item_collection" class="dropdown fullwidth mb20">
-                                        <a href="#" class="btn-selector">Select Religion</a>
-                                        <ul>
-                                            <li><span>SD</span></li>
-                                            <li><span>SMP</span></li>
-                                            <li><span>SMA</span></li>
-                                            <li><span>D3</span></li>
-                                            <li><span>S1</span></li>
-                                            <li><span>S2</span></li>
-                                            <li><span>S3</span></li>
-                                            <li><span>Lainnya</span></li>
-                                        </ul>
-                                    </div>
-
+                                    
+                                    <div class="spacer-20"></div>
+                                   
                                     <input type="button" id="submit" class="btn-main" value="Upload">
                                     <div class="spacer-single"></div>
                                 </div>

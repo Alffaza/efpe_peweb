@@ -30,7 +30,7 @@ if(move_uploaded_file($pas_foto_tmp, $path_pas) && move_uploaded_file($berkas_tm
 { // Cek apakah gambar berhasil diupload atau tidak
     $sql = $pdo->prepare("INSERT INTO Akun_Peserta(id_akun, jenis_kelamin, tempat_lahir, tanggal_lahir, kualifikasi_pendidikan, formasi_jabatan, lokasi_tes, pas_foto, foto_berkas) VALUES(:id_akun, :jenis_kelamin, :tempat_lahir, :tanggal_lahir, :kualifikasi_pendidikan, :formasi_jabatan, :lokasi_tes, :pas_foto, :foto_berkas)");
     $sql->bindParam(':id_akun', $id_akun);
-    $sql->bindParam(':jenis_kalimat', $jenis_kelamin);
+    $sql->bindParam(':jenis_kelamin', $jenis_kelamin);
     $sql->bindParam(':tempat_lahir', $tempat_lahir);
     $sql->bindParam(':tanggal_lahir', $tanggal_lahir);
     $sql->bindParam(':kualifikasi_pendidikan', $kualifikasi_pendidikan);
