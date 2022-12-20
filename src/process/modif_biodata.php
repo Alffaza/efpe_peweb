@@ -7,7 +7,7 @@ session_start();
 if (!isset($_SESSION['nik'])) {
     header("Location: login_page.php");
 }
- 
+
 $id_akun = $_SESSION['id_akun'];
 $jenis_kelamin = $_POST['jenis_kelamin'];
 $tempat_lahir = $_POST['tempat_lahir'];
@@ -28,7 +28,7 @@ $path_berkas = "../../images/berkas/".$fotobaru;
 
 if(move_uploaded_file($pas_foto_tmp, $path_pas) && move_uploaded_file($foto_berkas_tmp, $path_berkas))
 { // Cek apakah gambar berhasil diupload atau tidak
-    $sql = $pdo->prepare("INSERT INTO Peserta(id_akun, jenis_kelamin, tempat_lahir, tanggal_lahir, kualifikasi_pendidikan, formasi_jabatan, pas_foto, foto_berkas, sudah_oke) VALUES(:id_akun, :jenis_kelamin, :tempat_lahir, :tanggal_lahir, :kualifikasi_pendidikan, :formasi_jabatan, :pas_foto, :foto_berkas, false)");
+    $sql = $pdo->prepare("UPDATE Peserta SET id_akun=:id_akun , jenis_kelamin=:jenis_kelamin, tempat_lahir=:tempat_lahir, tanggal_lahir=:tanggal_lahir, kualifikasi_pendidikan=:kualifikasi_pendidikan, formasi_jabatan=:formasi_jabatan, pas_foto=:pas_foto, foto_berkas=:foto_berkas, sudah_oke=false");
     $sql->bindParam(':id_akun', $id_akun);
     $sql->bindParam(':jenis_kelamin', $jenis_kelamin);
     $sql->bindParam(':tempat_lahir', $tempat_lahir);

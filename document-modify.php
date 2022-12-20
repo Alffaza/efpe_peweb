@@ -6,8 +6,8 @@
     $id = $_SESSION['id_akun'];
     $sql = $pdo->prepare("SELECT * FROM Peserta WHERE id_akun=:id");
     $sql->bindParam(':id', $id);
-    if($sql)
-        header('location: document-modify.php');
+    if(!$sql)
+        header('location: document-upload.php');
 ?>
 
     
@@ -90,7 +90,7 @@
                         <div class="row">
                             
                         <div class="col-md-12 text-center">
-                            <h1>Upload Document</h1>
+                            <h1>Modif Document</h1>
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -105,7 +105,7 @@
             <div class="container">
                 <div class="row wow fadeIn">
                     <div class="col-lg-7 center-div">
-                        <form id="form-create-item" class="form-border" method="post" action="src/process/ngisi_biodata.php" enctype="multipart/form-data">
+                        <form id="form-create-item" class="form-border" method="post" action="src/process/modif_biodata.php" enctype="multipart/form-data">
                             <div class="field-set">
                                 
                             <h5>Jenis Kelamin</h5>
